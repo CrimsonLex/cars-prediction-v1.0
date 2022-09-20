@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Cars Prediction</title>
+    <!-- Favicon-->
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC7ElEQVQ4T6WSW0gUURzGvzN7mZkdp80LFdEoKShWiEX6EL0Y1FNED0E9diOqJwukN4Og7PKYFlQgUVEP9dqTSGXZBYyINkl3dVbdNJ2d27o7O7O3/rPkg8/N8JvL4X++853vfxj+82L/OR/rBI4eP96yIRK9lstkGi3LrDUsO5LLZpnnetlysWiVKl6yJij1xxKx+NrC6wSGBodGpQ31PdPxWSTUWevP0pJn2xaMtBHWln9HC4UCmpuUj7HJH/vWCcTj8XPvx8d7tiuNJ7JeBeqsisnpKS+1kFqyMzYS09NbLF0LO3kXkRCHM+fPPtu/f9/UkcNHr1UdvHjxtGvy18zrqbjaIEZkOLkcTNOE42Sxoi1D13W4joOS50HgeRw8dECT5dCx+/eH37KxsTeXt21T7pAOl0zOQU2m0NbWBlEUYFsWVldX4dLKCwspJGbi6OraDS7AIApCZXYueZndvn0zJtVu3bExGoUsSQhyJQwN3kO5XEKxUAQjjxVSL5WKuHDxAm0tiRw59MVXFtXv7PnzZ6YoRaOK0oRKuUwrzePWzQGayFAqlhDmw8jn8/BcF/1X+8G4EI0JyGRMfPn8KcOePHlsd3bukUMhnvZtI/U7hYEb18lBGUVfIBym7yL8Dpw+dbIqtmNnO2pqZLx8+SrPhocf6ao6XxvggshRUN3d3RgZGcHP2M9qMeM4CIKA1tZWdHS0Y+zdO2xvboZAGc0kZnQ2OHh3ibHAZkVRYBgG0poOTUvj4cMHaGjYBM9zkVm10dd3BRMTn8mVR0HupSADGP8wvsh6ey+pXye+NRnUtpXlFYgREXpaq2bgFzHGkX2vGqosy9UA6+vrUVdXB54PJlnHrs7RYCjQI4qiI0kRh9oW0A2dK3ge8w+6/6jQHSCxYJACDIcqrpsPOo4rmoY5ynieb6GABii0BuqW9A+B3iFi7aj7nfTxiBxhEn+IgbWCjfTTSCjEJkImfJEAUSYKRJawCY1YIOb8sb/6hWsTm9dmhgAAAABJRU5ErkJggg=="
+    />
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <!-- CSS -->
+    <link href="../static/css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-light static-top" style="background-color: #b16286">
+      <div class="container">
+        <a class="navbar-brand font-weight-bold" href="{{ url_for('index') }}">Cars Prediction</a>
+        <a class="btn btn-primary" href="#" style="background-color: #458588; border-color: #458588"
+          >About Us</a
+        >
+      </div>
+    </nav>
+    <!-- Masthead-->
+    <div class="masthead" style="min-height: 99vh; background-color: #282828">
+      <div class="container position-relative">
+        <div class="row justify-content-center" style="background-color: #1d2021">
+          <div class="col-xl-12 text-center text-white">{% block content %}{% endblock %}</div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../static/js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+$(function() {    
+    $('#prediction').click(function() {
+        
+    });
+});

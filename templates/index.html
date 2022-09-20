@@ -1,0 +1,101 @@
+{% extends "base.html" %} {% block content %}
+<!-- Page heading-->
+<h1 class="mt-4 font-weight-bold">Car Price</h1>
+<h3 class="mb-4">Calcula el precio de tu auto usado!</h3>
+<!-- Page form-->
+<form id="form" method="post">
+  <div class="row justify-content-center">
+    <!-- brand input-->
+    <div class="form-group col-md-6 px-4">
+      <label for="brand" class="col-form-label">Marca</label>
+      <input
+        class="form-control form-control-lg text-white"
+        name="brand"
+        type="text"
+        placeholder="marca"
+        value="{{ request.form['brand'] }}"
+        style="background-color: #282828"
+      />
+      <span class="text-danger">{{ errors['brand'] }}</span>
+    </div>
+    <!-- model input-->
+    <div class="form-group col-md-6 px-4">
+      <label for="model" class="col-form-label">Modelo</label>
+      <input
+        class="form-control form-control-lg text-white"
+        id="model"
+        name="model"
+        type="text"
+        placeholder="modelo"
+        value="{{ request.form['model'] }}"
+        style="background-color: #282828"
+      />
+      <span class="text-danger">{{ errors['model'] }}</span>
+    </div>
+    <!-- year input-->
+    <div class="form-group col-md-6 px-4">
+      <label for="year" class="col-form-label">Año</label>
+      <input
+        class="form-control form-control-lg text-white"
+        name="year"
+        type="number"
+        placeholder="2022"
+        value="{{ request.form['year'] }}"
+        style="background-color: #282828"
+      />
+      <span class="text-danger">{{ errors['year'] }}</span>
+    </div>
+    <!-- kilometers input-->
+    <div class="form-group col-md-6 px-4">
+      <label for="kilometers" class="col-form-label">Kilometraje</label>
+      <input
+        class="form-control form-control-lg text-white"
+        name="kilometers"
+        type="number"
+        placeholder="0"
+        value="{{ request.form['kilometers'] }}"
+        style="background-color: #282828"
+      />
+      <span class="text-danger">{{ errors['kilometers'] }}</span>
+    </div>
+    <!-- transmission input-->
+    <div class="form-group col-md-6 px-4 bg">
+      <label for="transmission" class="col-form-label">Transmisión</label>
+      <select
+        class="form-control form-control-lg text-white"
+        name="transmission"
+        style="background-color: #282828"
+      >
+        {% for o in data %}
+        <option value="{{ o.transmission }}">{{ o.transmission }}</option>
+        {% endfor %}
+      </select>
+      <span class="text-danger">{{ errors['transmission'] }}</span>
+    </div>
+  </div>
+  <!-- prediction -->
+  <div class="row justify-content-center py-4">
+    <div class="col-md-3">
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg"
+        style="height: 100%; width: 80%; background-color: #458588; border-color: #458588"
+      >
+        Calcular
+      </button>
+    </div>
+    <div class="col-md-4 bg-secondary rounded">
+      <p class="lead pt-2" style="height: 100%">{{ messages['price'] }}</p>
+    </div>
+    <div class="col-md-3">
+      <button
+        type="reset"
+        class="btn btn-primary btn-lg"
+        style="height: 100%; width: 80%; background-color: #458588; border-color: #458588"
+      >
+        Clear
+      </button>
+    </div>
+  </div>
+</form>
+{% endblock %}
